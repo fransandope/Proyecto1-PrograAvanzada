@@ -10,5 +10,6 @@ int main(array<String^>^ args) {
 	Proyecto1::MainForm form;
 	Application::Run(% form);
 	return 0;
+
 }
 
