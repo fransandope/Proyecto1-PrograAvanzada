@@ -1,5 +1,5 @@
-﻿  MainForm.cpp
-  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+﻿  Node.cpp
+  Stack.cpp
   Generando código...
   MainForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Proyecto1.vcxproj -> C:\Users\ojort\source\repos\Proyecto1\x64\Debug\Proyecto1.exe
+  Proyecto1.vcxproj -> C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\Proyecto1\x64\Debug\Proyecto1.exe

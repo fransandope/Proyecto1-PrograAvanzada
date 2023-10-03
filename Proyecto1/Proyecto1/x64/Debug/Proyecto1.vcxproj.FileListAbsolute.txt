@@ -2,3 +2,7 @@ C:\Users\ojort\source\repos\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.Asse
 C:\Users\ojort\source\repos\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\ojort\source\repos\Proyecto1\Proyecto1\x64\Debug\Proyecto1.MainForm.resources
 C:\Users\ojort\source\repos\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.GenerateResource.cache
+C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.AssemblyReference.cache
+C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\Proyecto1\Proyecto1\x64\Debug\Proyecto1.MainForm.resources
+C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\Proyecto1\Proyecto1\x64\Debug\Proyecto1.vcxproj.GenerateResource.cache
