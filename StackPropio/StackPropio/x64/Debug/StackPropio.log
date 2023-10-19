@@ -1,4 +1,0 @@
-﻿  MainForm.cpp
-C:\Users\ojort\source\repos\StackPropio\StackPropio\MainForm.h(296): warning C4715: 'StackPropio::MainForm::ComprobarX': no todas las rutas de acceso de control devuelven un valor
-  MainForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  StackPropio.vcxproj -> C:\Users\ojort\source\repos\StackPropio\x64\Debug\StackPropio.exe
