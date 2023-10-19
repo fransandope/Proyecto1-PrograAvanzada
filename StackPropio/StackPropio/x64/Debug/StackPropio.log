@@ -1,0 +1,15 @@
+﻿  MainForm.cpp
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(500,5): error C2628: 'StackPropio::MainForm' followed by 'void' is illegal (did you forget a ';'?)
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(501,26): error C2065: 'pila': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(504,6): error C2065: 'dgvTablero': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(505,6): error C2065: 'dgvTablero': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(508,23): error C2065: 'pila': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(509,7): error C2065: 'dgvTablero': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,96): error C2039: 'comboBox1_SelectedIndexChanged': is not a member of 'StackPropio::MainForm'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(20,19): message : see declaration of 'StackPropio::MainForm'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,96): error C2065: 'comboBox1_SelectedIndexChanged': undeclared identifier
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,78): error C3924: error in argument #2 of delegate constructor call 'System::EventHandler':
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,78): message : pointer to member function expected
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(513,1): error C2059: syntax error: 'private'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(516,1): error C2059: syntax error: '}'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(516,1): error C2143: syntax error: missing ';' before '}'
