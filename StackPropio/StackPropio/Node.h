@@ -11,5 +11,6 @@ public:
 
 	String^ dato;
 	Node^ next;
+	Node^ previus;
 };
 

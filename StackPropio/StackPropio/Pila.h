@@ -11,6 +11,7 @@ public:
 	Pila() {
 		count = 0;
 		start = nullptr;
+
 	}
 
 	void Push(String^ value); // Cambié el tipo de dato de int a String

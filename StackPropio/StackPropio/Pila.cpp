@@ -1,5 +1,5 @@
 #include "Pila.h"
-
+//extraer cola
 void Pila::Push(String^ value) {
     Node^ newNode = gcnew Node(value);
     if (isEmpty()) {
