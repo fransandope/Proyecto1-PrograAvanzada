@@ -31,4 +31,8 @@ String^ Cola::PeekCola() {
         return start->dato;
     }
     return nullptr;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

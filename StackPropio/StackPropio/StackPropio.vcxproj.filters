@@ -27,7 +27,11 @@
     <ClCompile Include="Cola.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="MetodosPilasYColas.cpp">
+=======
+    <ClCompile Include="procedimientos.cpp">
+>>>>>>> Stashed changes
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,5 +48,11 @@
     <ClInclude Include="Cola.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
+=======
+    <ClInclude Include="procedimientos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+>>>>>>> Stashed changes
   </ItemGroup>
 </Project>

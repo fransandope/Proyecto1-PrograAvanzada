@@ -1,6 +1,11 @@
 #pragma once
 #include"Pila.h"
 #include"Cola.h"
+<<<<<<< Updated upstream
+=======
+#include"Node.h"
+#include"procedimientos.h"
+>>>>>>> Stashed changes
 
 namespace StackPropio {
 
@@ -55,10 +60,14 @@ namespace StackPropio {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
+<<<<<<< Updated upstream
 	private: System::Windows::Forms::Button^ CambiarPilaACola;
 	private: System::Windows::Forms::ComboBox^ PilasExistentes;
 
 
+=======
+	private: System::Windows::Forms::TextBox^ Ganador;
+>>>>>>> Stashed changes
 
 
 	private:
@@ -86,8 +95,12 @@ namespace StackPropio {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+<<<<<<< Updated upstream
 			this->CambiarPilaACola = (gcnew System::Windows::Forms::Button());
 			this->PilasExistentes = (gcnew System::Windows::Forms::ComboBox());
+=======
+			this->Ganador = (gcnew System::Windows::Forms::TextBox());
+>>>>>>> Stashed changes
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -115,7 +128,11 @@ namespace StackPropio {
 			// 
 			// btnTablero
 			// 
+<<<<<<< Updated upstream
 			this->btnTablero->Location = System::Drawing::Point(152, 98);
+=======
+			this->btnTablero->Location = System::Drawing::Point(97, 96);
+>>>>>>> Stashed changes
 			this->btnTablero->Margin = System::Windows::Forms::Padding(2);
 			this->btnTablero->Name = L"btnTablero";
 			this->btnTablero->Size = System::Drawing::Size(86, 39);
@@ -126,7 +143,11 @@ namespace StackPropio {
 			// 
 			// txtPilas
 			// 
+<<<<<<< Updated upstream
 			this->txtPilas->Location = System::Drawing::Point(145, 159);
+=======
+			this->txtPilas->Location = System::Drawing::Point(74, 184);
+>>>>>>> Stashed changes
 			this->txtPilas->Margin = System::Windows::Forms::Padding(2);
 			this->txtPilas->Name = L"txtPilas";
 			this->txtPilas->Size = System::Drawing::Size(118, 20);
@@ -135,7 +156,11 @@ namespace StackPropio {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+<<<<<<< Updated upstream
 			this->label1->Location = System::Drawing::Point(194, 144);
+=======
+			this->label1->Location = System::Drawing::Point(72, 158);
+>>>>>>> Stashed changes
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(29, 13);
@@ -205,6 +230,7 @@ namespace StackPropio {
 			this->label2->TabIndex = 25;
 			this->label2->Text = L"label2";
 			// 
+<<<<<<< Updated upstream
 			// CambiarPilaACola
 			// 
 			this->CambiarPilaACola->Location = System::Drawing::Point(8, 122);
@@ -229,14 +255,27 @@ namespace StackPropio {
 				this->PilasExistentes->Size = System::Drawing::Size(58, 21);
 				this->PilasExistentes->TabIndex = 27;
 				this->PilasExistentes->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox1_SelectedIndexChanged);
+=======
+			// Ganador
+			// 
+			this->Ganador->Location = System::Drawing::Point(85, 219);
+			this->Ganador->Name = L"Ganador";
+			this->Ganador->Size = System::Drawing::Size(97, 20);
+			this->Ganador->TabIndex = 26;
+			this->Ganador->Text = L"No";
+>>>>>>> Stashed changes
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(848, 415);
+<<<<<<< Updated upstream
 			this->Controls->Add(this->PilasExistentes);
 			this->Controls->Add(this->CambiarPilaACola);
+=======
+			this->Controls->Add(this->Ganador);
+>>>>>>> Stashed changes
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->btnMover);
 			this->Controls->Add(this->txtDestino);
@@ -299,7 +338,8 @@ namespace StackPropio {
 
 		   //}
 		   
-
+		   //Cantidad filas es columnas (vertical, o cantidad de datos por pila)
+		   //columnas Cantidad de pilas
 		   void dibujarPila(int cantidadFilas, int columna, Pila^ pila) {
 			   Pila^ temp = gcnew Pila();
 
@@ -490,25 +530,39 @@ private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ 
 
 	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), pilaOrigen);
 	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtDestino->Text), pilaDestino);
+<<<<<<< Updated upstream
 	
 
 
+=======
+	for 
+	if (Check_Ganador(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), ArrayList ^ pilas; ) == true) {
+		this->Ganador->Text = L"No";
+>>>>>>> Stashed changes
 	}
 
 }
 
-	   void ActualizarDataGridView() {
-		   int cantidadFilas = pila->count;
-		   int cantidadColumnas = 1;
+	   //void ActualizarDataGridView() {
+		  // int cantidadFilas = pila->count;
+		  // int cantidadColumnas = 1;
 
-		   dgvTablero->ColumnCount = cantidadColumnas;
-		   dgvTablero->RowCount = cantidadFilas;
+		  // dgvTablero->ColumnCount = cantidadColumnas;
+		  // dgvTablero->RowCount = cantidadFilas;
 
+<<<<<<< Updated upstream
 		   for (int i = 0; i < cantidadFilas; i++) {
 			   String^ valor = pila->PeekPila(); // Usar Peek para obtener el elemento sin eliminarlo
 			   dgvTablero->Rows[i]->Cells[0]->Value = valor;
 		   }
 	   }
+=======
+		  // for (int i = 0; i < cantidadFilas; i++) {
+			 //  String^ valor = pila->Peek(); // Usar Peek para obtener el elemento sin eliminarlo
+			 //  dgvTablero->Rows[i]->Cells[0]->Value = valor;
+		  // }
+	   //}
+>>>>>>> Stashed changes
 
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }

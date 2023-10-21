@@ -126,6 +126,7 @@
     <ClCompile Include="MetodosPilasYColas.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Pila.cpp" />
+    <ClCompile Include="procedimientos.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cola.h" />
@@ -134,6 +135,7 @@
     </ClInclude>
     <ClInclude Include="Node.h" />
     <ClInclude Include="Pila.h" />
+    <ClInclude Include="procedimientos.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">

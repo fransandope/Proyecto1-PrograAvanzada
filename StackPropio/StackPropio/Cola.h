@@ -1,4 +1,8 @@
 #pragma once
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 #include "Node.h"
 
 using namespace System;

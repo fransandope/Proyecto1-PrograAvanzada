@@ -1,0 +1,25 @@
+﻿  Cola.cpp
+  MyForm.cpp
+  Nodo.cpp
+  Pila.cpp
+  Procedimientos.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generating Code...
+  Cola.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+Procedimientos.obj : error LNK2020: unresolved token (06000009) Cola::ColaPushCola
+Cola.obj : error LNK2020: unresolved token (06000004) Cola::ColaPushCola
+Procedimientos.obj : error LNK2020: unresolved token (0600000A) Cola::ColaPop
+Cola.obj : error LNK2020: unresolved token (06000005) Cola::ColaPop
+Procedimientos.obj : error LNK2020: unresolved token (0600000B) Cola::ColaPeek
+Cola.obj : error LNK2020: unresolved token (06000006) Cola::ColaPeek
+Procedimientos.obj : error LNK2020: unresolved token (0600000C) Cola::ColaIsEmpty
+Cola.obj : error LNK2020: unresolved token (06000007) Cola::ColaIsEmpty
+Procedimientos.obj : error LNK2020: unresolved token (06000004) Pila::PilaPush
+Pila.obj : error LNK2020: unresolved token (06000004) Pila::PilaPush
+Procedimientos.obj : error LNK2020: unresolved token (06000005) Pila::PilaPop
+Pila.obj : error LNK2020: unresolved token (06000005) Pila::PilaPop
+Procedimientos.obj : error LNK2020: unresolved token (06000006) Pila::PilaPeek
+Pila.obj : error LNK2020: unresolved token (06000006) Pila::PilaPeek
+Procedimientos.obj : error LNK2020: unresolved token (06000007) Pila::PilaIsEmpty
+Pila.obj : error LNK2020: unresolved token (06000007) Pila::PilaIsEmpty
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\ColorMania\x64\Debug\ColorMania.exe : fatal error LNK1120: 16 unresolved externals
