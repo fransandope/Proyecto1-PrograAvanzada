@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿  MainForm.cpp
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(500,5): error C2628: 'StackPropio::MainForm' followed by 'void' is illegal (did you forget a ';'?)
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(501,26): error C2065: 'pila': undeclared identifier
@@ -18,4 +19,7 @@ C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\Stack
 ﻿  procedimientos.cpp
   Cola.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
+>>>>>>> Stashed changes
+=======
+﻿  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
 >>>>>>> Stashed changes
