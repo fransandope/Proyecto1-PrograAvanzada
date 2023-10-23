@@ -1,4 +1,14 @@
+<<<<<<< Updated upstream
 ﻿  MainForm.cpp
 C:\Users\Francisco U\Desktop\StackPropio\StackPropio\MainForm.h(389): warning C4715: 'StackPropio::MainForm::ComprobarX': not all control paths return a value
   MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   StackPropio.vcxproj -> C:\Users\Francisco U\Desktop\StackPropio\x64\Debug\StackPropio.exe
+=======
+﻿  FormInicio.cpp
+  MainForm.cpp
+  Generating Code...
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+  FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
+>>>>>>> Stashed changes

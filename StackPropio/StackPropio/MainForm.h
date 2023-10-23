@@ -221,6 +221,360 @@ namespace StackPropio {
 
 		}
 #pragma endregion
+<<<<<<< Updated upstream
+=======
+
+
+		//o7
+		//definiciones
+
+		int origen;
+		int destino;
+		int columnas;
+		int filas;
+
+
+
+		//definen variables
+
+		int definircolumnas() {
+			try {
+				int x = Convert::ToInt32(txtElementos->Text);
+				return x;
+			}
+			catch (FormatException^) {
+				return 0;
+			}
+		}
+
+		int definirorigen() {
+			try {
+				int x = Convert::ToInt32(txtOrigen->Text);
+				return x;
+			}
+			catch (FormatException^) {
+
+				return 0;
+			}
+		}
+
+		int definirdestino() {
+			try {
+				int x = Convert::ToInt32(txtDestino->Text);
+				return x;
+			}
+			catch (FormatException^) {
+
+				return 0;
+			}
+		}
+
+		int definirfilas() {
+			try {
+				int x = Convert::ToInt32(txtPilas->Text);
+				return x;
+			}
+			catch (FormatException^) {
+
+				return 0;
+			}
+		}
+
+
+
+		void CrearArchivo() {
+			String^ fileName = "MapaInicial.txt"; // Nombre del archivo
+			try {
+				// Utilizamos StreamWriter para crear el archivo y escribir en él
+				StreamWriter^ writer = gcnew StreamWriter(fileName);
+
+
+
+				// Cierra el StreamWriter
+				writer->Close();
+
+				MessageBox::Show("Archivo MapaInicial creado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show("Error al crear el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		//crea las pilas
+		void CrearPilas() {
+			String^ filename = "MapaInicial.txt";
+			StreamReader^ reader = gcnew StreamReader(filename);
+			String^ linea;
+			pilas = gcnew ArrayList();
+
+			while ((linea = reader->ReadLine()) != nullptr) {
+				array<String^>^ letras = linea->Split(',');
+
+				Pila^ pilaActual = gcnew Pila();
+
+				for (int i = 0; i < letras->Length; i++) {
+					if (letras[i] == "X") {
+						pilas->Add(pilaActual);
+						pilaActual = gcnew Pila();
+
+					}
+					else {
+						pilaActual->Push(letras[i]);
+					}
+				}
+
+				pilas->Add(pilaActual);
+			}
+
+			reader->Close();
+		}
+
+
+		//Dibuja una unica pila
+		void dibujarPila(int cantidadFilas, int columna, Pila^ pila) {
+
+
+
+			Pila^ temp = gcnew Pila();
+
+			while (pila->count > 0) {
+				temp->Push(pila->Pop());
+			}
+
+			for (int i = 0; i < cantidadFilas; i++) {
+
+				dgvTablero->Rows[i]->Cells[columna]->Value = "";
+
+			}
+
+			int index = cantidadFilas - 1;
+			while (temp->count > 0) {
+				pila->Push(temp->Pop());
+				dgvTablero->Rows[index]->Cells[columna]->Value = pila->Peek();
+				index--;
+			}
+		}
+
+
+		//Dibuja todas las pilas
+		void DibujarPilas() {
+			int cantidadFilas = columnas;
+			int cantidadColumnas = filas;
+
+			dgvTablero->ColumnCount = cantidadColumnas;
+			dgvTablero->RowCount = cantidadFilas;
+
+			for (int j = 0; j < cantidadColumnas; j++) {
+				dibujarPila(cantidadFilas, j, (Pila^)pilas[j]);
+			}
+		}
+
+		//Verifica si hay un ganador
+		bool VerificarGanador() {
+			if (pilas == nullptr) {
+				return false; // No se han cargado las pilas
+			}
+
+			for (int j = 0; j < pilas->Count; j++) {
+				Pila^ pila = (Pila^)pilas[j];
+				if (pila->count == 0) {
+					return false; // La pila está vacía, no cumple la condición
+				}
+
+				Pila^ copia = pila->Copiar();
+
+				String^ letraComparacion = nullptr;
+				bool primeraLetra = true;
+
+				while (copia->count > 0) {
+					String^ letra = (String^)copia->Pop();
+					if (letra != "X") {
+						if (primeraLetra) {
+							letraComparacion = letra;
+							primeraLetra = false;
+						}
+						else if (letra != letraComparacion) {
+							return false; // La letra en la pila no es igual a la letra de comparación
+						}
+					}
+				}
+			}
+
+			return true; // Todas las pilas cumplen la condición
+		}
+
+		bool ComprobarX(int cantidadX, int cantidadFilas) {
+			int numPilas = filas;
+
+			return cantidadX == numPilas - 1;
+		}
+
+
+
+		void ordenar() {
+			List<String^>^ elementosOrdenados = gcnew List<String^>();
+
+			for (int i = 0; i < pilas->Count; i++) {
+				Pila^ pila = safe_cast<Pila^>(pilas[i]);
+				while (!pila->isEmpty()) {
+					elementosOrdenados->Add(pila->Pop());
+				}
+			}
+			int columnasOrden = Convert::ToInt32(txtPilas->Text);
+			// Obtén el número máximo de elementos en una fila
+			int elementosPorFila = elementosOrdenados->Count / columnasOrden;
+
+			elementosOrdenados->Sort();
+			mostrarEnDataGridView(elementosOrdenados, dgvOrdenados, elementosPorFila);
+		}
+
+		//cuenta que la cantidad de X en el archivo sea la correcta
+		int ContarX() {
+			String^ filename = "MapaInicial.txt";
+			StreamReader^ reader = gcnew StreamReader(filename);
+			int cantidadX = 0;
+			String^ linea;
+
+			while ((linea = reader->ReadLine()) != nullptr) {
+				array<String^>^ letras = linea->Split(',');
+
+				for (int i = 0; i < letras->Length; i++) {
+					if (letras[i] == "X") {
+						cantidadX++;
+					}
+				}
+			}
+
+			reader->Close();
+			return cantidadX;
+		}
+
+		bool ContarC() {
+			String^ filename = "MapaInicial.txt";
+			StreamReader^ reader = gcnew StreamReader(filename);
+			int cantidadC = 0;
+			String^ linea;
+
+			while ((linea = reader->ReadLine()) != nullptr) {
+				array<String^>^ letras = linea->Split(',');
+
+				for (int i = 0; i < letras->Length; i++) {
+					if (letras[i] != "X") {
+
+						cantidadC++;
+
+					}
+					else {
+						cantidadC = 0;
+					}
+					if (cantidadC > columnas) {
+						return false;
+					}
+				}
+				if (cantidadC > columnas) {
+					return false;
+				}
+				else {
+					return true;
+				}
+			}
+			reader->Close();
+		}
+
+		//suma e imprime el contador de movimientos
+		void Moviemiento() {
+			contMovimientos++;
+			label6->Text = Convert::ToString(contMovimientos);
+
+		}
+		//borra 3 caracteres?
+		void borrar3Caracteres(String^ filename) {
+			StreamReader^ reader = gcnew StreamReader(filename);
+
+			// Lee la línea actual del archivo
+			String^ linea = reader->ReadLine();
+			reader->Close();
+
+			// Verifica que la línea tenga al menos tres caracteres antes de intentar eliminar los últimos tres
+			if (linea->Length >= 3) {
+				// Elimina los últimos tres caracteres
+				linea = linea->Substring(0, linea->Length - 3);
+
+				// Abre el archivo en modo de escritura para sobrescribir su contenido
+				StreamWriter^ writer = gcnew StreamWriter(filename);
+
+				// Escribe la línea modificada en el archivo
+				writer->WriteLine(linea);
+				writer->Close();
+			}
+		}
+		
+		//guarda las pilas en el archivo
+		void GuardarPilasEnArchivo() {
+			String^ filename = "MapaInicial.txt";
+			StreamWriter^ writer = gcnew StreamWriter(filename);
+
+			// Recorre las pilas y escribe su contenido en el archivo
+			for each (Pila ^ pila in pilas) {
+				while (!pila->isEmpty()) {
+					String^ elemento = pila->Pop()->ToString();
+					writer->Write(elemento);
+
+					// Agrega una coma si no es el último elemento de la pila
+					if (!pila->isEmpty()) {
+						writer->Write(",");
+					}
+				}
+				writer->Write(",X,"); // Marca el final de la pila con una "X"
+			}
+
+			// Cierra el archivo
+			writer->Close();
+
+			borrar3Caracteres(filename);
+		}
+		// escribe acada movimiento en el archivo
+		void EscribirMovimientoEnArchivo(String^ movimiento) {
+			try {
+				// Abre o crea el archivo "Movimientos" en modo de escritura
+				StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt", true);
+
+				// Escribe el movimiento en el archivo
+				writer->Write(movimiento);
+
+				// Cierra el archivo
+				writer->Close();
+			}
+			catch (Exception^ e) {
+				MessageBox::Show("Error al escribir en el archivo de movimientos: " + e->Message);
+			}
+		}
+
+		void mostrarEnDataGridView(List<String^>^ elementosOrdenados, DataGridView^ dgvOrdenados, int elementosPorFila) {
+			dgvOrdenados->Columns->Clear(); // Borra todas las columnas existentes
+
+			int numColumnas = elementosPorFila; // Define el número de columnas
+
+			// Agrega columnas
+			for (int i = 0; i < numColumnas; i++) {
+				dgvOrdenados->Columns->Add("Columna" + i, "Columna " + i);
+			}
+
+			// Agrega filas para mostrar elementos
+			for (int i = 0; i < elementosPorFila; i++) {
+				int filaActual = dgvOrdenados->Rows->Add();
+				for (int j = 0; j < numColumnas; j++) {
+					dgvOrdenados->Rows[filaActual]->Cells[j]->Value = elementosOrdenados[j * numColumnas + i];
+				}
+			}
+		}
+
+		public:
+			property int timeRecibir;
+			property int moveRecibir;
+			static int contMovimientos = 0;
+>>>>>>> Stashed changes
 
 	private: System::Void btnLeerAr_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ fileName = "MapaInicial.txt"; // Nombre del archivo
@@ -243,6 +597,7 @@ namespace StackPropio {
 	}
 		   
 
+<<<<<<< Updated upstream
 		   void dibujarPila(int cantidadFilas, int columna, Pila^ pila) {
 			   Pila^ temp = gcnew Pila();
 
@@ -263,11 +618,17 @@ namespace StackPropio {
 
 
 		   }
+=======
+		   
+
+		  
+>>>>>>> Stashed changes
 
 		   ArrayList^ pilas;
 
 	private: System::Void btnTablero_Click(System::Object^ sender, System::EventArgs^ e) {
 
+<<<<<<< Updated upstream
 		bool valueX = false;
 		valueX= ComprobarX();
 
@@ -331,13 +692,48 @@ namespace StackPropio {
 			Process::Start(file);
 			Console::Read();
 			ComprobarX();
+=======
+		columnas = definircolumnas();
+		filas = definirfilas();
+		origen = definirorigen();
+		destino = definirdestino();
+		if (columnas >= 4 && columnas <= 10 && filas >= 4 && filas <= 10) {
+
+			int cantidadX = ContarX();
+			bool ConstantesC = ContarC();
+			int cantidadPilas = filas;
+			if (ConstantesC == true) {
+
+				if (cantidadX == cantidadPilas - 1) {
+					CrearPilas();
+					if (ConstantesC == true) {
+						DibujarPilas();
+					}
+					timerJuego->Start();
+				}
+				else {
+					MessageBox::Show("Resultado no permitido", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+			}
+			else {
+				MessageBox::Show("Hay mas objetos que columnas", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
 		}
-		
+		else {
+			MessageBox::Show("Las filas y columnas deben de estar entre 4 y 10.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+>>>>>>> Stashed changes
+		}
+
 	}
+<<<<<<< Updated upstream
 		   //(Pila^)pilas[j]) 
 		   // int temp =peek;
 		   // add temp =
 		
+=======
+		   
+
+>>>>>>> Stashed changes
 private: System::Void btnDataGrid_Click(System::Object^ sender, System::EventArgs^ e) {
 
 }
@@ -346,6 +742,7 @@ private: System::Void btnDataGrid_Click(System::Object^ sender, System::EventArg
 		   int contadorX = 0;
 		   int contadorC = 0;
 
+<<<<<<< Updated upstream
 		   try {
 			   while (true) {
 
@@ -390,6 +787,9 @@ private: System::Void btnDataGrid_Click(System::Object^ sender, System::EventArg
 			   return false;
 		   }
 	   }
+=======
+	   
+>>>>>>> Stashed changes
 
 private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ fileName = "MapaInicial.txt"; // Nombre del archivo
@@ -406,13 +806,20 @@ private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs
 
 private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	Pila^ pilaOrigen = (Pila^)pilas[Convert::ToInt32(txtOrigen->Text)];
-	Pila^ pilaDestino = (Pila^)pilas[Convert::ToInt32(txtDestino->Text)];
-	pilaDestino->Push(pilaOrigen->Pop());
+	columnas = definircolumnas();
+	filas = definirfilas();
+	origen = definirorigen();
+	destino = definirdestino();
+	if (origen >= 0 && origen <= filas && destino >= 0 && destino <= filas && origen != destino) {
+		Pila^ pilaOrigen = (Pila^)pilas[origen];
+		Pila^ pilaDestino = (Pila^)pilas[destino];
+		if ((pilaDestino->Count() < columnas && pilaOrigen->Count() > 0)) {
+			pilaDestino->Push(pilaOrigen->Pop());
 
-	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), pilaOrigen);
-	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtDestino->Text), pilaDestino);
+			dibujarPila(dgvTablero->RowCount, origen, pilaOrigen);
+			dibujarPila(dgvTablero->RowCount, destino, pilaDestino);
 
+<<<<<<< Updated upstream
 }
 
 	   void ActualizarDataGridView() {
@@ -428,5 +835,145 @@ private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ 
 		   }
 	   }
 
+=======
+			Moviemiento();
+			if (VerificarGanador()) {
+				MessageBox::Show("¡Ganaste el juego!", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+
+
+
+			if (contMovimientos >= moveRecibir) {
+				String^ mensaje = "Ha llegado a la cantidad máxima de movimientos. Movimientos realizados: " + contMovimientos;
+				MessageBox::Show(mensaje, "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+			String^ movimiento = "P(" + txtOrigen->Text + "), P(" + txtDestino->Text + ")\n";
+			EscribirMovimientoEnArchivo(movimiento);
+		}
+		else {
+			
+			MessageBox::Show("La pila destino esta llena o la de origen esta vacia", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+	else {
+		MessageBox::Show("El origen y el destino deben de exitir, y ser distintos entre si", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+
+	}
+}
+	   //Hola Fransan :p
+	   
+
+private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	// Configura el DataGridView
+	dgvTablero->AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode::AllCells;
+	dgvTablero->DefaultCellStyle->WrapMode = DataGridViewTriState::True;
+	dgvTablero->CellFormatting += gcnew DataGridViewCellFormattingEventHandler(this, &MainForm::dgvTablero_CellFormatting);
+}
+	   private: System::Void dgvTablero_CellFormatting(System::Object^ sender, System::Windows::Forms::DataGridViewCellFormattingEventArgs^ e) {
+		   if (e->Value) {
+			   String^ cellValue = e->Value->ToString();
+
+			   if (cellValue == "A") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Yellow;
+			   }
+			   else if (cellValue == "R") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Red;
+			   }
+			   else if (cellValue == "B") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Blue;
+			   }
+			   else if (cellValue == "V") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Green;
+			   }
+			   else if (cellValue == "N") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Orange;
+			   }
+			   else if (cellValue == "M") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Purple;
+			   }
+		   }
+	   }
+
+
+	private: System::Void btnGanador_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		if (VerificarGanador()) {
+			MessageBox::Show("¡Ganaste el juego!", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else {
+			MessageBox::Show("Aún no has ganado el juego. Sigue intentando.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
+
+	private: System::Void btnResolver_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		ordenar();
+	}
+		   
+
+		   
+
+private:
+	int minutos = 0;
+	int segundos = 0;
+
+	private: System::Void timerJuego_Tick(System::Object^ sender, System::EventArgs^ e) {
+		static int tiempoTranscurrido = 0;
+		tiempoTranscurrido++;
+		segundos++;
+
+		if (segundos == 60) {
+			minutos++;
+			segundos = 0;
+		}
+		// Formatea el tiempo en minutos:segundos
+		String^ tiempoFormateado = String::Format("{0:D2}:{1:D2}", minutos, segundos);
+
+		// Actualiza una etiqueta con el tiempo transcurrido en el nuevo formato
+		label2->Text = "Tiempo transcurrido: " + tiempoFormateado;
+		// Verifica si han pasado 10 minutos
+		if (minutos == timeRecibir) {
+			// Detiene el temporizador para que no siga contando
+			timerJuego->Stop();
+
+			// Muestra un mensaje
+			MessageBox::Show("Se acabó tu tiempo", "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ fileName = "Movimientos.txt"; // Nombre del archivo
+	try {
+		// Abre el archivo con el programa predeterminado
+		Process::Start(fileName);
+
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show("Error al abrir el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
+
+
+private: System::Void MainForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	try {
+		// Abre el archivo en modo de escritura para sobrescribir su contenido
+		StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt");
+		writer->Write(""); // Escribe una cadena vacía para borrar el contenido
+		writer->Close();
+	}
+	catch (IOException^ ex) {
+		// Manejo de errores si no se puede borrar el contenido del archivo
+		MessageBox::Show("Error al borrar el contenido del archivo de movimientos: " + ex->Message);
+	}
+}
+private: System::Void btnGuardar_Click(System::Object^ sender, System::EventArgs^ e) {
+	GuardarPilasEnArchivo();
+}
+
+	   
+
+	   
+
+
+>>>>>>> Stashed changes
 };
 }
