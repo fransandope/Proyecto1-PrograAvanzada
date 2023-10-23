@@ -1,4 +1,5 @@
 #include "MainForm.h"
+#include"FormInicio.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -7,7 +8,7 @@ using namespace System::Windows::Forms;
 int main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	StackPropio::MainForm form;
+	StackPropio::FormInicio form;
 	Application::Run(% form);
 	return 0;
 }

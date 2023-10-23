@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <ProjectOutputs>
-    <ProjectOutput>
-      <FullPath>C:\Users\Francisco U\Desktop\StackPropio\x64\Debug\StackPropio.exe</FullPath>
-    </ProjectOutput>
-  </ProjectOutputs>
-  <ContentFiles />
-  <SatelliteDlls />
-  <NonRecipeFileRefs />
-=======
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ProjectOutputs>
@@ -20,5 +8,4 @@
   <ContentFiles />
   <SatelliteDlls />
   <NonRecipeFileRefs />
->>>>>>> Stashed changes
 </Project>

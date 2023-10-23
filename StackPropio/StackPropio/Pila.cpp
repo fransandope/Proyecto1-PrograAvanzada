@@ -1,39 +1,3 @@
-<<<<<<< Updated upstream
-#include "Pila.h"
-//extraer cola
-void Pila::Push(String^ value) {
-    Node^ newNode = gcnew Node(value);
-    if (isEmpty()) {
-        start = newNode;
-    }
-    else {
-        newNode->next = start;
-        start = newNode;
-    }
-    count++;
-}
-
-bool Pila::isEmpty() {
-    return count == 0;
-}
-
-String^Pila::Pop() {
-    if (!isEmpty()) {
-        Node^ temp = start;
-        start = start->next;
-        count--;
-        return temp->dato;
-    }
-    return nullptr;
-}
-
-String^ Pila::Peek() {
-    if (!isEmpty()) {
-        return start->dato;
-    }
-    return nullptr;
-}
-=======
 #include "Pila.h"
 
 void Pila::Push(String^ value) {
@@ -73,10 +37,6 @@ void Pila::Clear() {
     while (!isEmpty()) {
         Pop(); // Llama a Pop repetidamente hasta que la pila esté vacía
     }
-}
-
-int Pila::Count() {
-    return count;
 }
 
 Pila^ Pila::Copiar() {
@@ -129,4 +89,3 @@ String^ Pila::ElementAt(int index) {
     return actual->dato;
 }
 
->>>>>>> Stashed changes

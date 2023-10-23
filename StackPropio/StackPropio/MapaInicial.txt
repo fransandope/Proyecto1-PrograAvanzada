@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-C,B,J,G,X,G,D,H,F,X,B,B,B,G,X,F,G,H,J
-=======
-R,R,R,R,X,A,A,A,A,A,X,B,B,B,B,B,X,M,M,M,M,M,X,M
->>>>>>> Stashed changes
+R,R,A,M,X,M,A,B,R,X,R,A,B,B,X,B,M,A,M,X,B,M,C,A,M,X,B,M,A,M

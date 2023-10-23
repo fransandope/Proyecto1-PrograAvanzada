@@ -1,123 +1,13 @@
-﻿  MainForm.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(1,1): error C2059: syntax error: '<<'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(7,7): error C2061: syntax error: identifier 'String'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,8): error C2143: syntax error: missing ';' before '^'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,14): error C2238: unexpected token(s) preceding ';'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(8,9): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(8,16): error C2065: 'dato': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(25,1): error C2059: syntax error: '=='
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(31,1): error C2011: 'Pila': 'class' type redefinition
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(54,1): error C2059: syntax error: '>>'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(4,23): error C2143: syntax error: missing ';' before '{'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(4,23): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.cpp(10,2): error C2653: 'StackPropio': is not a class or namespace name
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.cpp(10,15): error C2065: 'MainForm': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.cpp(10,24): error C2146: syntax error: missing ';' before identifier 'form'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.cpp(10,24): error C2065: 'form': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.cpp(11,21): error C2065: 'form': undeclared identifier
+﻿  FormInicio.cpp
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
+  MainForm.cpp
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
   Node.cpp
-  Pila.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(1,1): error C2059: syntax error: '<<'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(7,7): error C2061: syntax error: identifier 'String'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,8): error C2143: syntax error: missing ';' before '^'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(12,14): error C2238: unexpected token(s) preceding ';'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(8,9): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(8,16): error C2065: 'dato': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(25,1): error C2059: syntax error: '=='
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(31,1): error C2011: 'Pila': 'class' type redefinition
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(54,1): error C2059: syntax error: '>>'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(4,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(4,32): error C2143: syntax error: missing ';' before '{'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(4,32): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(16,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(17,12): error C2065: 'count': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(20,14): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(22,22): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(23,9): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(23,17): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(24,9): error C2065: 'count': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(25,22): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(30,15): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(32,16): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(36,1): error C2059: syntax error: '=='
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(39,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(39,32): error C2143: syntax error: missing ';' before '{'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(39,32): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(51,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(51,12): error C2084: function 'bool isEmpty(void)' already has a body
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(16,12): message : see previous definition of 'isEmpty'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(52,12): error C2065: 'count': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(55,14): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(55,14): error C2084: function 'System::String ^Pop(void)' already has a body
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(20,14): message : see previous definition of 'Pop'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(56,10): error C2065: 'isEmpty': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(56,9): warning C4551: function call missing argument list
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(57,22): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(58,9): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(58,17): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(59,9): error C2065: 'count': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(60,22): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(65,15): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(65,15): error C2084: function 'System::String ^Peek(void)' already has a body
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(30,15): message : see previous definition of 'Peek'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(66,10): error C2065: 'isEmpty': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(66,9): warning C4551: function call missing argument list
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(67,16): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(72,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(73,13): error C2065: 'isEmpty': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(73,12): warning C4551: function call missing argument list
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(74,9): error C2065: 'Pop': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(78,11): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(79,12): error C2065: 'count': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(82,13): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(83,29): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(85,18): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(88,9): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(88,27): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(95,12): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(96,9): error C2065: 'isEmpty': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(100,17): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(107,22): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(107,43): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(109,34): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(110,22): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(110,34): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(111,22): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(120,15): error C2027: use of undefined type 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.h(6,11): message : see declaration of 'Pila'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(121,18): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(123,20): error C2065: 'start': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(129,20): error C2039: 'dato': is not a member of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Node.h(4,11): message : see declaration of 'Node'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\Pila.cpp(132,1): error C2059: syntax error: '>>'
-  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
   Generating Code...
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+  FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+Pila.obj : warning LNK4099: PDB '' was not found with 'Pila.obj' or at ''; linking object as if no debug info
+  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe

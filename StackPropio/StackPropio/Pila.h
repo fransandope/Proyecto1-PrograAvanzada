@@ -1,28 +1,3 @@
-<<<<<<< Updated upstream
-#pragma once
-#include "Node.h"
-using namespace System;
-
-ref class Pila
-{
-public:
-	Node^ start;
-	int count;
-
-	Pila() {
-		count = 0;
-		start = nullptr;
-
-	}
-
-	void Push(String^ value); // Cambié el tipo de dato de int a String
-	String^ Pop(); // Cambié el tipo de dato de int a String
-	String^ Peek(); // Cambié el tipo de dato de int a String
-	bool isEmpty();
-
-};
-
-=======
 #pragma once
 #include "Node.h"
 using namespace System;
@@ -46,9 +21,6 @@ public:
 	Pila^ Copiar();
 	void BubbleSort();
 	String^ ElementAt(int index);
-	int Count();
-	
 
 };
 
->>>>>>> Stashed changes

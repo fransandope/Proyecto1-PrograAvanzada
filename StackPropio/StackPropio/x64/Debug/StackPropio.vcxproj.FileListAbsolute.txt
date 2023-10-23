@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
-C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
-C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
-C:\Users\Francisco U\Desktop\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
-C:\Users\Francisco U\Desktop\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
-C:\Users\Francisco U\Desktop\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
-=======
 C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
 C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\ojort\source\repos\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
@@ -16,13 +7,11 @@ C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\x64\Debug\St
 C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
 C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
 C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\x64\Debug\StackPropio.FormInicio.resources
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.FormInicio.resources
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.FormInicio.resources
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
->>>>>>> Stashed changes
+C:\Prog\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
+C:\Prog\StackPropio\StackPropio\x64\Debug\StackPropio.FormInicio.resources
+C:\Prog\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
+C:\Prog\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
