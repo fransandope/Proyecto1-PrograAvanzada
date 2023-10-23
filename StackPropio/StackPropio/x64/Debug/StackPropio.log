@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿  MainForm.cpp
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(500,5): error C2628: 'StackPropio::MainForm' followed by 'void' is illegal (did you forget a ';'?)
 C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(501,26): error C2065: 'pila': undeclared identifier
@@ -22,4 +23,17 @@ C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\Stack
 >>>>>>> Stashed changes
 =======
 ﻿  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
+>>>>>>> Stashed changes
+=======
+﻿  FormInicio.cpp
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
+  MainForm.cpp
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
+  Generating Code...
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+  FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
 >>>>>>> Stashed changes
