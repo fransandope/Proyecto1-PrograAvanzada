@@ -81,6 +81,7 @@ namespace StackPropio {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Button^ btnRegistro;
+	private: System::Windows::Forms::Button^ btnGuardar;
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -166,6 +167,7 @@ namespace StackPropio {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->btnRegistro = (gcnew System::Windows::Forms::Button());
+			this->btnGuardar = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->BeginInit();
 			this->SuspendLayout();
@@ -480,7 +482,7 @@ namespace StackPropio {
 			// 
 			// btnRegistro
 			// 
-			this->btnRegistro->Location = System::Drawing::Point(591, 473);
+			this->btnRegistro->Location = System::Drawing::Point(592, 453);
 			this->btnRegistro->Name = L"btnRegistro";
 			this->btnRegistro->Size = System::Drawing::Size(198, 45);
 			this->btnRegistro->TabIndex = 33;
@@ -488,11 +490,22 @@ namespace StackPropio {
 			this->btnRegistro->UseVisualStyleBackColor = true;
 			this->btnRegistro->Click += gcnew System::EventHandler(this, &MainForm::button1_Click);
 			// 
+			// btnGuardar
+			// 
+			this->btnGuardar->Location = System::Drawing::Point(592, 507);
+			this->btnGuardar->Name = L"btnGuardar";
+			this->btnGuardar->Size = System::Drawing::Size(198, 45);
+			this->btnGuardar->TabIndex = 34;
+			this->btnGuardar->Text = L"Guardar Partida";
+			this->btnGuardar->UseVisualStyleBackColor = true;
+			this->btnGuardar->Click += gcnew System::EventHandler(this, &MainForm::btnGuardar_Click);
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1311, 564);
+			this->Controls->Add(this->btnGuardar);
 			this->Controls->Add(this->btnRegistro);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label2);
@@ -875,5 +888,55 @@ private: System::Void MainForm_FormClosing(System::Object^ sender, System::Windo
 		MessageBox::Show("Error al borrar el contenido del archivo de movimientos: " + ex->Message);
 	}
 }
+private: System::Void btnGuardar_Click(System::Object^ sender, System::EventArgs^ e) {
+	GuardarPilasEnArchivo();
+}
+
+	   void GuardarPilasEnArchivo() {
+		   String^ filename = "MapaInicial.txt";
+		   StreamWriter^ writer = gcnew StreamWriter(filename);
+
+		   // Recorre las pilas y escribe su contenido en el archivo
+		   for each (Pila ^ pila in pilas) {
+			   while (!pila->isEmpty()) {
+				   String^ elemento = pila->Pop()->ToString();
+				   writer->Write(elemento);
+
+				   // Agrega una coma si no es el último elemento de la pila
+				   if (!pila->isEmpty()) {
+					   writer->Write(",");
+				   }
+			   }
+			   writer->Write(",X,"); // Marca el final de la pila con una "X"
+		   }
+
+		   // Cierra el archivo
+		   writer->Close();
+
+		   borrar3Caracteres(filename);
+	   }
+
+	   void borrar3Caracteres(String^ filename) {
+		   StreamReader^ reader = gcnew StreamReader(filename);
+
+		   // Lee la línea actual del archivo
+		   String^ linea = reader->ReadLine();
+		   reader->Close();
+
+		   // Verifica que la línea tenga al menos tres caracteres antes de intentar eliminar los últimos tres
+		   if (linea->Length >= 3) {
+			   // Elimina los últimos tres caracteres
+			   linea = linea->Substring(0, linea->Length - 3);
+
+			   // Abre el archivo en modo de escritura para sobrescribir su contenido
+			   StreamWriter^ writer = gcnew StreamWriter(filename);
+
+			   // Escribe la línea modificada en el archivo
+			   writer->WriteLine(linea);
+			   writer->Close();
+		   }
+	   }
+
+
 };
 }
