@@ -1,3 +1,9 @@
-﻿  MainForm.cpp
-  MainForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+﻿  FormInicio.cpp
+C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\FormInicio.h(276,1): warning C4305: 'inicializando': truncamiento de '__int64' a 'int'
+C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'inicializando': truncamiento de valor constante
+  MainForm.cpp
+C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\FormInicio.h(276,1): warning C4305: 'inicializando': truncamiento de '__int64' a 'int'
+C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'inicializando': truncamiento de valor constante
+  Generando código...
+  FormInicio.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   StackPropio.vcxproj -> C:\Users\ojort\source\repos\StackPropio (2)\StackPropio\x64\Debug\StackPropio.exe

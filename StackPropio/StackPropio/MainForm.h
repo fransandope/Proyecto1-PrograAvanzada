@@ -77,6 +77,10 @@ namespace StackPropio {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column16;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
+	private: System::Windows::Forms::Timer^ timerJuego;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -112,7 +116,7 @@ namespace StackPropio {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -121,6 +125,7 @@ namespace StackPropio {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->dgvTablero = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -155,6 +160,9 @@ namespace StackPropio {
 			this->Column16 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column17 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->timerJuego = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->BeginInit();
 			this->SuspendLayout();
@@ -347,7 +355,7 @@ namespace StackPropio {
 			// 
 			// btnGanador
 			// 
-			this->btnGanador->Location = System::Drawing::Point(394, 493);
+			this->btnGanador->Location = System::Drawing::Point(356, 493);
 			this->btnGanador->Name = L"btnGanador";
 			this->btnGanador->Size = System::Drawing::Size(143, 27);
 			this->btnGanador->TabIndex = 26;
@@ -373,7 +381,7 @@ namespace StackPropio {
 			// 
 			// btnResolver
 			// 
-			this->btnResolver->Location = System::Drawing::Point(651, 475);
+			this->btnResolver->Location = System::Drawing::Point(530, 484);
 			this->btnResolver->Name = L"btnResolver";
 			this->btnResolver->Size = System::Drawing::Size(198, 45);
 			this->btnResolver->TabIndex = 29;
@@ -444,11 +452,36 @@ namespace StackPropio {
 			this->Column18->Name = L"Column18";
 			this->Column18->Width = 125;
 			// 
+			// timerJuego
+			// 
+			this->timerJuego->Interval = 1000;
+			this->timerJuego->Tick += gcnew System::EventHandler(this, &MainForm::timerJuego_Tick);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(830, 484);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(54, 16);
+			this->label2->TabIndex = 31;
+			this->label2->Text = L"Tiempo";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(830, 526);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(83, 16);
+			this->label6->TabIndex = 32;
+			this->label6->Text = L"Movimientos";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1184, 564);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->dgvOrdenados);
 			this->Controls->Add(this->btnResolver);
 			this->Controls->Add(this->txtElementos);
@@ -475,6 +508,10 @@ namespace StackPropio {
 
 		}
 #pragma endregion
+		public:
+			property int timeRecibir;
+			property int moveRecibir;
+			static int contMovimientos = 0;
 
 	private: System::Void btnLeerAr_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ fileName = "MapaInicial.txt"; // Nombre del archivo
@@ -541,6 +578,7 @@ namespace StackPropio {
 		if (cantidadX == cantidadPilas - 1) {
 			CrearPilas();
 			DibujarPilas();
+			timerJuego->Start();
 		}
 		else {
 			MessageBox::Show("Resultado no permitido", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -627,6 +665,13 @@ private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ 
 	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), pilaOrigen);
 	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtDestino->Text), pilaDestino);
 
+	contMovimientos++;
+	label6->Text = Convert::ToString(contMovimientos);
+
+	if (contMovimientos >= moveRecibir) {
+		String^ mensaje = "Ha llegado a la cantidad máxima de movimientos. Movimientos realizados: " + contMovimientos;
+		MessageBox::Show(mensaje, "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 	   //Hola Fransan :p
 
@@ -745,5 +790,32 @@ private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e
 			   }
 		   }
 
-	};
+private:
+	int minutos = 0;
+	int segundos = 0;
+
+	private: System::Void timerJuego_Tick(System::Object^ sender, System::EventArgs^ e) {
+		static int tiempoTranscurrido = 0;
+		tiempoTranscurrido++;
+		segundos++;
+
+		if (segundos == 60) {
+			minutos++;
+			segundos = 0;
+		}
+		// Formatea el tiempo en minutos:segundos
+		String^ tiempoFormateado = String::Format("{0:D2}:{1:D2}", minutos, segundos);
+
+		// Actualiza una etiqueta con el tiempo transcurrido en el nuevo formato
+		label2->Text = "Tiempo transcurrido: " + tiempoFormateado;
+		// Verifica si han pasado 10 minutos
+		if (minutos == timeRecibir) {
+			// Detiene el temporizador para que no siga contando
+			timerJuego->Stop();
+
+			// Muestra un mensaje
+			MessageBox::Show("Se acabó tu tiempo", "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
+};
 }
