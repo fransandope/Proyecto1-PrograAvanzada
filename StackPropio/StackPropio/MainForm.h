@@ -80,6 +80,8 @@ namespace StackPropio {
 	private: System::Windows::Forms::Timer^ timerJuego;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Button^ btnRegistro;
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -163,6 +165,7 @@ namespace StackPropio {
 			this->timerJuego = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->btnRegistro = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->BeginInit();
 			this->SuspendLayout();
@@ -178,7 +181,7 @@ namespace StackPropio {
 			this->dgvTablero->Name = L"dgvTablero";
 			this->dgvTablero->RowHeadersWidth = 51;
 			this->dgvTablero->RowTemplate->Height = 24;
-			this->dgvTablero->Size = System::Drawing::Size(416, 395);
+			this->dgvTablero->Size = System::Drawing::Size(575, 395);
 			this->dgvTablero->TabIndex = 0;
 			// 
 			// Column1
@@ -355,7 +358,7 @@ namespace StackPropio {
 			// 
 			// btnGanador
 			// 
-			this->btnGanador->Location = System::Drawing::Point(356, 493);
+			this->btnGanador->Location = System::Drawing::Point(356, 462);
 			this->btnGanador->Name = L"btnGanador";
 			this->btnGanador->Size = System::Drawing::Size(143, 27);
 			this->btnGanador->TabIndex = 26;
@@ -381,7 +384,7 @@ namespace StackPropio {
 			// 
 			// btnResolver
 			// 
-			this->btnResolver->Location = System::Drawing::Point(530, 484);
+			this->btnResolver->Location = System::Drawing::Point(333, 503);
 			this->btnResolver->Name = L"btnResolver";
 			this->btnResolver->Size = System::Drawing::Size(198, 45);
 			this->btnResolver->TabIndex = 29;
@@ -396,7 +399,7 @@ namespace StackPropio {
 				this->Column12,
 					this->Column13, this->Column14, this->Column15, this->Column16, this->Column17, this->Column18
 			});
-			this->dgvOrdenados->Location = System::Drawing::Point(801, 44);
+			this->dgvOrdenados->Location = System::Drawing::Point(963, 44);
 			this->dgvOrdenados->Name = L"dgvOrdenados";
 			this->dgvOrdenados->RowHeadersWidth = 51;
 			this->dgvOrdenados->RowTemplate->Height = 24;
@@ -460,7 +463,7 @@ namespace StackPropio {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(830, 484);
+			this->label2->Location = System::Drawing::Point(865, 473);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(54, 16);
 			this->label2->TabIndex = 31;
@@ -469,17 +472,28 @@ namespace StackPropio {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(830, 526);
+			this->label6->Location = System::Drawing::Point(865, 515);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(83, 16);
 			this->label6->TabIndex = 32;
 			this->label6->Text = L"Movimientos";
 			// 
+			// btnRegistro
+			// 
+			this->btnRegistro->Location = System::Drawing::Point(591, 473);
+			this->btnRegistro->Name = L"btnRegistro";
+			this->btnRegistro->Size = System::Drawing::Size(198, 45);
+			this->btnRegistro->TabIndex = 33;
+			this->btnRegistro->Text = L"Archivo Movimientos";
+			this->btnRegistro->UseVisualStyleBackColor = true;
+			this->btnRegistro->Click += gcnew System::EventHandler(this, &MainForm::button1_Click);
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1184, 564);
+			this->ClientSize = System::Drawing::Size(1311, 564);
+			this->Controls->Add(this->btnRegistro);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->dgvOrdenados);
@@ -500,6 +514,7 @@ namespace StackPropio {
 			this->Controls->Add(this->dgvTablero);
 			this->Name = L"MainForm";
 			this->Text = L"MainForm";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->EndInit();
@@ -657,7 +672,6 @@ private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs
 
 private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ e) {
 
-
 	Pila^ pilaOrigen = (Pila^)pilas[Convert::ToInt32(txtOrigen->Text)];
 	Pila^ pilaDestino = (Pila^)pilas[Convert::ToInt32(txtDestino->Text)];
 	pilaDestino->Push(pilaOrigen->Pop());
@@ -672,9 +686,28 @@ private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ 
 		String^ mensaje = "Ha llegado a la cantidad máxima de movimientos. Movimientos realizados: " + contMovimientos;
 		MessageBox::Show(mensaje, "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
+
+	// Registra la jugada en el archivo "Movimientos"
+	String^ movimiento = "P(" + txtOrigen->Text + "), P(" + txtDestino->Text + ")\n";
+	EscribirMovimientoEnArchivo(movimiento);
+
 }
 	   //Hola Fransan :p
+	   void EscribirMovimientoEnArchivo(String^ movimiento) {
+		   try {
+			   // Abre o crea el archivo "Movimientos" en modo de escritura
+			   StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt", true);
 
+			   // Escribe el movimiento en el archivo
+			   writer->Write(movimiento);
+
+			   // Cierra el archivo
+			   writer->Close();
+		   }
+		   catch (Exception^ e) {
+			   MessageBox::Show("Error al escribir en el archivo de movimientos: " + e->Message);
+		   }
+	   }
 
 private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	// Configura el DataGridView
@@ -817,5 +850,30 @@ private:
 			MessageBox::Show("Se acabó tu tiempo", "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ fileName = "Movimientos.txt"; // Nombre del archivo
+	try {
+		// Abre el archivo con el programa predeterminado
+		Process::Start(fileName);
+
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show("Error al abrir el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
+
+
+private: System::Void MainForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	try {
+		// Abre el archivo en modo de escritura para sobrescribir su contenido
+		StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt");
+		writer->Write(""); // Escribe una cadena vacía para borrar el contenido
+		writer->Close();
+	}
+	catch (IOException^ ex) {
+		// Manejo de errores si no se puede borrar el contenido del archivo
+		MessageBox::Show("Error al borrar el contenido del archivo de movimientos: " + ex->Message);
+	}
+}
 };
 }
