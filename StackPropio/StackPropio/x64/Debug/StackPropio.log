@@ -1,39 +1,7 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-﻿  MainForm.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(500,5): error C2628: 'StackPropio::MainForm' followed by 'void' is illegal (did you forget a ';'?)
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(501,26): error C2065: 'pila': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(504,6): error C2065: 'dgvTablero': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(505,6): error C2065: 'dgvTablero': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(508,23): error C2065: 'pila': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(509,7): error C2065: 'dgvTablero': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,96): error C2039: 'comboBox1_SelectedIndexChanged': is not a member of 'StackPropio::MainForm'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(20,19): message : see declaration of 'StackPropio::MainForm'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,96): error C2065: 'comboBox1_SelectedIndexChanged': undeclared identifier
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,78): error C3924: error in argument #2 of delegate constructor call 'System::EventHandler':
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(231,78): message : pointer to member function expected
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(513,1): error C2059: syntax error: 'private'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(516,1): error C2059: syntax error: '}'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(516,1): error C2143: syntax error: missing ';' before '}'
-=======
-﻿  procedimientos.cpp
-  Cola.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
->>>>>>> Stashed changes
-=======
-﻿  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
->>>>>>> Stashed changes
-=======
 ﻿  FormInicio.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
   MainForm.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
   Generating Code...
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
   FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
->>>>>>> Stashed changes
+  StackPropio.vcxproj -> C:\Users\Francisco U\Desktop\StackPropioV1\x64\Debug\StackPropio.exe

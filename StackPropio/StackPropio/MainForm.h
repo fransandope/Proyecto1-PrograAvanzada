@@ -1,575 +1,3 @@
-<<<<<<< Updated upstream
-#pragma once
-#include"Pila.h"
-#include"Cola.h"
-<<<<<<< Updated upstream
-=======
-#include"Node.h"
-#include"procedimientos.h"
->>>>>>> Stashed changes
-
-namespace StackPropio {
-
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
-	using namespace System::Collections::Generic;
-	using namespace System::IO;
-	using namespace System::Diagnostics;
-
-	/// <summary>
-	/// Resumen de MainForm
-	/// </summary>
-	public ref class MainForm : public System::Windows::Forms::Form
-	{
-	public:
-		MainForm(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
-			pila = gcnew Pila();
-		}
-
-	protected:
-		/// <summary>
-		/// Limpiar los recursos que se estén usando.
-		/// </summary>
-		~MainForm()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
-	private: System::Windows::Forms::DataGridView^ dgvTablero;
-	protected:
-	private: System::Windows::Forms::Button^ btnLeerAr;
-	private: System::Windows::Forms::Button^ btnTablero;
-	private: Pila^ pila;
-
-	private: System::Windows::Forms::TextBox^ txtPilas;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ btnAbrirAr;
-	private: System::Windows::Forms::Button^ btnMover;
-	private: System::Windows::Forms::TextBox^ txtDestino;
-	private: System::Windows::Forms::TextBox^ txtOrigen;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label2;
-<<<<<<< Updated upstream
-	private: System::Windows::Forms::Button^ CambiarPilaACola;
-	private: System::Windows::Forms::ComboBox^ PilasExistentes;
-
-
-=======
-	private: System::Windows::Forms::TextBox^ Ganador;
->>>>>>> Stashed changes
-
-
-	private:
-		/// <summary>
-		/// Variable del diseñador necesaria.
-		/// </summary>
-		System::ComponentModel::Container ^components;
-
-#pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
-		/// </summary>
-		void InitializeComponent(void)
-		{
-			this->dgvTablero = (gcnew System::Windows::Forms::DataGridView());
-			this->btnLeerAr = (gcnew System::Windows::Forms::Button());
-			this->btnTablero = (gcnew System::Windows::Forms::Button());
-			this->txtPilas = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->btnAbrirAr = (gcnew System::Windows::Forms::Button());
-			this->btnMover = (gcnew System::Windows::Forms::Button());
-			this->txtDestino = (gcnew System::Windows::Forms::TextBox());
-			this->txtOrigen = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-<<<<<<< Updated upstream
-			this->CambiarPilaACola = (gcnew System::Windows::Forms::Button());
-			this->PilasExistentes = (gcnew System::Windows::Forms::ComboBox());
-=======
-			this->Ganador = (gcnew System::Windows::Forms::TextBox());
->>>>>>> Stashed changes
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
-			this->SuspendLayout();
-			// 
-			// dgvTablero
-			// 
-			this->dgvTablero->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgvTablero->Location = System::Drawing::Point(267, 36);
-			this->dgvTablero->Margin = System::Windows::Forms::Padding(2);
-			this->dgvTablero->Name = L"dgvTablero";
-			this->dgvTablero->RowHeadersWidth = 51;
-			this->dgvTablero->RowTemplate->Height = 24;
-			this->dgvTablero->Size = System::Drawing::Size(530, 320);
-			this->dgvTablero->TabIndex = 0;
-			// 
-			// btnLeerAr
-			// 
-			this->btnLeerAr->Location = System::Drawing::Point(33, 36);
-			this->btnLeerAr->Margin = System::Windows::Forms::Padding(2);
-			this->btnLeerAr->Name = L"btnLeerAr";
-			this->btnLeerAr->Size = System::Drawing::Size(86, 39);
-			this->btnLeerAr->TabIndex = 1;
-			this->btnLeerAr->Text = L"Leer Archivo";
-			this->btnLeerAr->UseVisualStyleBackColor = true;
-			this->btnLeerAr->Click += gcnew System::EventHandler(this, &MainForm::btnLeerAr_Click);
-			// 
-			// btnTablero
-			// 
-<<<<<<< Updated upstream
-			this->btnTablero->Location = System::Drawing::Point(152, 98);
-=======
-			this->btnTablero->Location = System::Drawing::Point(97, 96);
->>>>>>> Stashed changes
-			this->btnTablero->Margin = System::Windows::Forms::Padding(2);
-			this->btnTablero->Name = L"btnTablero";
-			this->btnTablero->Size = System::Drawing::Size(86, 39);
-			this->btnTablero->TabIndex = 2;
-			this->btnTablero->Text = L"Tablero";
-			this->btnTablero->UseVisualStyleBackColor = true;
-			this->btnTablero->Click += gcnew System::EventHandler(this, &MainForm::btnTablero_Click);
-			// 
-			// txtPilas
-			// 
-<<<<<<< Updated upstream
-			this->txtPilas->Location = System::Drawing::Point(145, 159);
-=======
-			this->txtPilas->Location = System::Drawing::Point(74, 184);
->>>>>>> Stashed changes
-			this->txtPilas->Margin = System::Windows::Forms::Padding(2);
-			this->txtPilas->Name = L"txtPilas";
-			this->txtPilas->Size = System::Drawing::Size(118, 20);
-			this->txtPilas->TabIndex = 4;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-<<<<<<< Updated upstream
-			this->label1->Location = System::Drawing::Point(194, 144);
-=======
-			this->label1->Location = System::Drawing::Point(72, 158);
->>>>>>> Stashed changes
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(29, 13);
-			this->label1->TabIndex = 5;
-			this->label1->Text = L"Pilas";
-			// 
-			// btnAbrirAr
-			// 
-			this->btnAbrirAr->Location = System::Drawing::Point(152, 36);
-			this->btnAbrirAr->Margin = System::Windows::Forms::Padding(2);
-			this->btnAbrirAr->Name = L"btnAbrirAr";
-			this->btnAbrirAr->Size = System::Drawing::Size(86, 39);
-			this->btnAbrirAr->TabIndex = 6;
-			this->btnAbrirAr->Text = L"abrir";
-			this->btnAbrirAr->UseVisualStyleBackColor = true;
-			this->btnAbrirAr->Click += gcnew System::EventHandler(this, &MainForm::btnAbrirAr_Click);
-			// 
-			// btnMover
-			// 
-			this->btnMover->Location = System::Drawing::Point(97, 347);
-			this->btnMover->Name = L"btnMover";
-			this->btnMover->Size = System::Drawing::Size(75, 23);
-			this->btnMover->TabIndex = 24;
-			this->btnMover->Text = L"Mover";
-			this->btnMover->UseVisualStyleBackColor = true;
-			this->btnMover->Click += gcnew System::EventHandler(this, &MainForm::btnMover_Click);
-			// 
-			// txtDestino
-			// 
-			this->txtDestino->Location = System::Drawing::Point(109, 293);
-			this->txtDestino->Name = L"txtDestino";
-			this->txtDestino->Size = System::Drawing::Size(100, 20);
-			this->txtDestino->TabIndex = 23;
-			// 
-			// txtOrigen
-			// 
-			this->txtOrigen->Location = System::Drawing::Point(109, 257);
-			this->txtOrigen->Name = L"txtOrigen";
-			this->txtOrigen->Size = System::Drawing::Size(100, 20);
-			this->txtOrigen->TabIndex = 22;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(44, 297);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(46, 13);
-			this->label4->TabIndex = 21;
-			this->label4->Text = L"Destino:";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(44, 262);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(38, 13);
-			this->label3->TabIndex = 20;
-			this->label3->Text = L"Origen";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(513, 375);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(35, 13);
-			this->label2->TabIndex = 25;
-			this->label2->Text = L"label2";
-			// 
-<<<<<<< Updated upstream
-			// CambiarPilaACola
-			// 
-			this->CambiarPilaACola->Location = System::Drawing::Point(8, 122);
-			this->CambiarPilaACola->Name = L"CambiarPilaACola";
-			this->CambiarPilaACola->Size = System::Drawing::Size(82, 35);
-			this->CambiarPilaACola->TabIndex = 26;
-			this->CambiarPilaACola->Text = L"Cambiar Pila/Cola";
-			this->CambiarPilaACola->UseVisualStyleBackColor = true;
-			// 
-			// PilasExistentes
-				this->PilasExistentes->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(5) {
-					L"", L"a", L"a", L"a",
-						L"a"
-				});
-				this->PilasExistentes->FormattingEnabled = true;
-				this->PilasExistentes->Items->AddRange(gcnew cli::array< System::Object^  >(8) {
-					L"a", L"a", L"a", L"a", L"a", L"a", L"a",
-						L"a"
-				});
-				this->PilasExistentes->Location = System::Drawing::Point(23, 176);
-				this->PilasExistentes->Name = L"PilasExistentes";
-				this->PilasExistentes->Size = System::Drawing::Size(58, 21);
-				this->PilasExistentes->TabIndex = 27;
-				this->PilasExistentes->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox1_SelectedIndexChanged);
-=======
-			// Ganador
-			// 
-			this->Ganador->Location = System::Drawing::Point(85, 219);
-			this->Ganador->Name = L"Ganador";
-			this->Ganador->Size = System::Drawing::Size(97, 20);
-			this->Ganador->TabIndex = 26;
-			this->Ganador->Text = L"No";
->>>>>>> Stashed changes
-			// 
-			// MainForm
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(848, 415);
-<<<<<<< Updated upstream
-			this->Controls->Add(this->PilasExistentes);
-			this->Controls->Add(this->CambiarPilaACola);
-=======
-			this->Controls->Add(this->Ganador);
->>>>>>> Stashed changes
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->btnMover);
-			this->Controls->Add(this->txtDestino);
-			this->Controls->Add(this->txtOrigen);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->btnAbrirAr);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->txtPilas);
-			this->Controls->Add(this->btnTablero);
-			this->Controls->Add(this->btnLeerAr);
-			this->Controls->Add(this->dgvTablero);
-			this->Margin = System::Windows::Forms::Padding(2);
-			this->Name = L"MainForm";
-			this->Text = L"MainForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->EndInit();
-			this->ResumeLayout(false);
-			this->PerformLayout();
-
-		}
-#pragma endregion
-
-	private: System::Void btnLeerAr_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ fileName = "MapaInicial.txt"; // Nombre del archivo
-		try {
-			// Utilizamos StreamWriter para crear el archivo y escribir en él
-			StreamWriter^ writer = gcnew StreamWriter(fileName);
-
-
-
-			// Cierra el StreamWriter
-			writer->Close();
-
-			MessageBox::Show("Archivo MapaInicial creado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-
-		}
-		catch (Exception^ ex) {
-			MessageBox::Show("Error al crear el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		}
-	}
-		   //void convertirPila(int cantidadFilas, int columna, Pila^ pila) {
-			  // Cola^ temp = gcnew Cola();
-
-			  // while (pila->count > 0) {
-				 //  temp->PushCola(pila->PopPila());
-			  // }
-
-			  // for (int i = 0; i < cantidadFilas; i++) {
-				 ////  dgvTablero->Rows[i]->Cells[columna]->Value = "";
-			  // }
-
-			  // int index = cantidadFilas - 1;
-			  // while (temp->count > 0) {
-				 //  pila->PushPila(temp->PopPila());
-				 //  dgvTablero->Rows[index]->Cells[columna]->Value = pila->PeekPila();
-				 //  index--;
-			  // }
-
-
-		   //}
-		   
-		   //Cantidad filas es columnas (vertical, o cantidad de datos por pila)
-		   //columnas Cantidad de pilas
-		   void dibujarPila(int cantidadFilas, int columna, Pila^ pila) {
-			   Pila^ temp = gcnew Pila();
-
-			   while (pila->count > 0) {
-				   temp->PushPila(pila->PopPila());
-			   }
-
-			   for (int i = 0; i < cantidadFilas; i++) {
-				   dgvTablero->Rows[i]->Cells[columna]->Value = "";
-			   }
-
-			   int index = cantidadFilas-1;
-			   while (temp->count > 0) {
-				   pila->PushPila(temp->PopPila());
-				   dgvTablero->Rows[index]->Cells[columna]->Value = pila->PeekPila();
-				   index--;
-			   }
-
-
-		   }
-		   //
-		   ArrayList^ pilas;
-
-	private: System::Void btnTablero_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		bool valueX = false;
-		valueX= ComprobarX();
-
-		if (valueX != false) {
-			String^ filename = "MapaInicial.txt";
-			StreamReader^ reader = gcnew StreamReader(filename);
-
-			String^ linea;
-
-			pilas = gcnew ArrayList();
-
-			while ((linea = reader->ReadLine()) != nullptr)
-			{
-				// Divide la línea en letras individuales utilizando la coma como separador.
-				array<String^>^ letras = linea->Split(',');
-				
-
-				// Agrega las letras a la pila.
-				for (int i = letras->Length-1; i >= 0; i--)
-				{
-					
-					String^ letra = letras[i];
-					if (letra != "X") {
-						pila->PushPila(letra);
-					}
-				}
-			}
-
-			// Cierra el lector del archivo.
-			reader->Close();
-
-			int cantidadFilas = Convert::ToInt32(txtPilas->Text);
-			int cantidadColumnas = Convert::ToInt32(txtPilas->Text);
-
-			dgvTablero->ColumnCount = cantidadColumnas;
-			dgvTablero->RowCount = cantidadFilas;
-
-
-
-			for (int j = 0; j < cantidadColumnas; j++)
-			{
-				pilas->Add(gcnew Pila());
-
-				for (int i = 0; i < cantidadFilas; i++)
-				{
-
-					if (pila->count > 0)
-					{
-						String^ letra = pila->PopPila();
-						if (letra != "X") {
-							((Pila^)pilas[j])->PushPila(letra);
-						}
-
-					}
-				}
-				dibujarPila(cantidadFilas, j, (Pila^)pilas[j]);
-			}
-		}
-		else if(valueX!=true) {
-			String^ file = "MapaInicial.txt";
-			Process::Start(file);
-			Console::Read();
-			ComprobarX();
-		}
-		
-	}
-		   //(Pila^)pilas[j]) 
-		   // int temp =peek;
-		   // add temp =
-		
-private: System::Void btnDataGrid_Click(System::Object^ sender, System::EventArgs^ e) {
-
-}
-	   bool ComprobarX() {
-		   String^ fileName = "MapaInicial.txt"; // Nombre del archivo
-		   int contadorX = 0;
-		   int contadorC = 0;
-
-		   try {
-			   while (true) {
-
-				   // Abre el archivo con el programa predeterminado
-				   StreamReader^ sr = gcnew StreamReader(fileName);
-				   while (!sr->EndOfStream) {
-					   String^ linea = sr->ReadLine();
-					   for each (Char c in linea) {
-						   if (c == 'X') {
-							   contadorX++;
-						   
-						   
-						   }
-						   else {
-							   if (c != ',' && c != 'X') {
-								   contadorC++;
-							   }
-							   
-						   }
-					   }
-					   
-				   }
-
-
-				   sr->Close();
-
-				   int numPilas = Convert::ToInt32(txtPilas->Text);
-				   int numColumnas = Convert::ToInt32(txtPilas->Text);
-
-				   if (contadorX == numPilas - 1 && contadorC == numColumnas*numPilas) {
-					   MessageBox::Show("Resultado permitido", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
-					   break; // Sal del bucle si el resultado es permitido.
-					   return true;
-				   }
-				   else {
-					   MessageBox::Show("Resultado no permitido", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
-					   return false;
-				   }
-			   }
-		   }
-		   catch (Exception^ ex) {
-			   MessageBox::Show("Error al abrir el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-			   return false;
-		   }
-	   }
-
-private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ fileName = "MapaInicial.txt"; // Nombre del archivo
-	try {
-		// Abre el archivo con el programa predeterminado
-		Process::Start(fileName);
-
-	}
-	catch (Exception^ ex) {
-		MessageBox::Show("Error al abrir el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
-}
-	   /*bool CheckGanador(Pila^ pila, int cantidadFilas) {
-		   Pila^ temp = gcnew Pila();
-
-		   while (pila->count > 0) {
-			   temp->PushPila(pila->PopPila());
-			   char = temporal;
-			   if (temp->PeekPila){
-
-		   }
-
-		   for (int i = 0; i < cantidadFilas; i++) {   
-		   }
-
-		   int index = cantidadFilas - 1;
-		   while (temp->count > 0) {
-			   pila->PushPila(temp->PopPila());
-			   dgvTablero->Rows[index]->Cells[columna]->Value = pila->PeekPila();
-			   index--;
-		   }
-	   }*/
-
-
-private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	Pila^ pilaOrigen = (Pila^)pilas[Convert::ToInt32(txtOrigen->Text)];
-	Pila^ pilaDestino = (Pila^)pilas[Convert::ToInt32(txtDestino->Text)];
-	pilaDestino->PushPila(pilaOrigen->PopPila());
-
-	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), pilaOrigen);
-	dibujarPila(dgvTablero->RowCount, Convert::ToInt32(txtDestino->Text), pilaDestino);
-<<<<<<< Updated upstream
-	
-
-
-=======
-	for 
-	if (Check_Ganador(dgvTablero->RowCount, Convert::ToInt32(txtOrigen->Text), ArrayList ^ pilas; ) == true) {
-		this->Ganador->Text = L"No";
->>>>>>> Stashed changes
-	}
-
-}
-
-	   //void ActualizarDataGridView() {
-		  // int cantidadFilas = pila->count;
-		  // int cantidadColumnas = 1;
-
-		  // dgvTablero->ColumnCount = cantidadColumnas;
-		  // dgvTablero->RowCount = cantidadFilas;
-
-<<<<<<< Updated upstream
-		   for (int i = 0; i < cantidadFilas; i++) {
-			   String^ valor = pila->PeekPila(); // Usar Peek para obtener el elemento sin eliminarlo
-			   dgvTablero->Rows[i]->Cells[0]->Value = valor;
-		   }
-	   }
-=======
-		  // for (int i = 0; i < cantidadFilas; i++) {
-			 //  String^ valor = pila->Peek(); // Usar Peek para obtener el elemento sin eliminarlo
-			 //  dgvTablero->Rows[i]->Cells[0]->Value = valor;
-		  // }
-	   //}
->>>>>>> Stashed changes
-
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
-}
-=======
 #pragma once
 #include"Pila.h"
 
@@ -652,6 +80,9 @@ namespace StackPropio {
 	private: System::Windows::Forms::Timer^ timerJuego;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Button^ btnRegistro;
+	private: System::Windows::Forms::Button^ btnGuardar;
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -735,6 +166,8 @@ namespace StackPropio {
 			this->timerJuego = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->btnRegistro = (gcnew System::Windows::Forms::Button());
+			this->btnGuardar = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->BeginInit();
 			this->SuspendLayout();
@@ -750,7 +183,7 @@ namespace StackPropio {
 			this->dgvTablero->Name = L"dgvTablero";
 			this->dgvTablero->RowHeadersWidth = 51;
 			this->dgvTablero->RowTemplate->Height = 24;
-			this->dgvTablero->Size = System::Drawing::Size(416, 395);
+			this->dgvTablero->Size = System::Drawing::Size(575, 395);
 			this->dgvTablero->TabIndex = 0;
 			// 
 			// Column1
@@ -927,7 +360,7 @@ namespace StackPropio {
 			// 
 			// btnGanador
 			// 
-			this->btnGanador->Location = System::Drawing::Point(356, 493);
+			this->btnGanador->Location = System::Drawing::Point(356, 462);
 			this->btnGanador->Name = L"btnGanador";
 			this->btnGanador->Size = System::Drawing::Size(143, 27);
 			this->btnGanador->TabIndex = 26;
@@ -953,7 +386,7 @@ namespace StackPropio {
 			// 
 			// btnResolver
 			// 
-			this->btnResolver->Location = System::Drawing::Point(530, 484);
+			this->btnResolver->Location = System::Drawing::Point(333, 503);
 			this->btnResolver->Name = L"btnResolver";
 			this->btnResolver->Size = System::Drawing::Size(198, 45);
 			this->btnResolver->TabIndex = 29;
@@ -968,7 +401,7 @@ namespace StackPropio {
 				this->Column12,
 					this->Column13, this->Column14, this->Column15, this->Column16, this->Column17, this->Column18
 			});
-			this->dgvOrdenados->Location = System::Drawing::Point(801, 44);
+			this->dgvOrdenados->Location = System::Drawing::Point(963, 44);
 			this->dgvOrdenados->Name = L"dgvOrdenados";
 			this->dgvOrdenados->RowHeadersWidth = 51;
 			this->dgvOrdenados->RowTemplate->Height = 24;
@@ -1032,7 +465,7 @@ namespace StackPropio {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(830, 484);
+			this->label2->Location = System::Drawing::Point(865, 473);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(54, 16);
 			this->label2->TabIndex = 31;
@@ -1041,17 +474,39 @@ namespace StackPropio {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(830, 526);
+			this->label6->Location = System::Drawing::Point(865, 515);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(83, 16);
 			this->label6->TabIndex = 32;
 			this->label6->Text = L"Movimientos";
 			// 
+			// btnRegistro
+			// 
+			this->btnRegistro->Location = System::Drawing::Point(592, 453);
+			this->btnRegistro->Name = L"btnRegistro";
+			this->btnRegistro->Size = System::Drawing::Size(198, 45);
+			this->btnRegistro->TabIndex = 33;
+			this->btnRegistro->Text = L"Archivo Movimientos";
+			this->btnRegistro->UseVisualStyleBackColor = true;
+			this->btnRegistro->Click += gcnew System::EventHandler(this, &MainForm::button1_Click);
+			// 
+			// btnGuardar
+			// 
+			this->btnGuardar->Location = System::Drawing::Point(592, 507);
+			this->btnGuardar->Name = L"btnGuardar";
+			this->btnGuardar->Size = System::Drawing::Size(198, 45);
+			this->btnGuardar->TabIndex = 34;
+			this->btnGuardar->Text = L"Guardar Partida";
+			this->btnGuardar->UseVisualStyleBackColor = true;
+			this->btnGuardar->Click += gcnew System::EventHandler(this, &MainForm::btnGuardar_Click);
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1184, 564);
+			this->ClientSize = System::Drawing::Size(1311, 564);
+			this->Controls->Add(this->btnGuardar);
+			this->Controls->Add(this->btnRegistro);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->dgvOrdenados);
@@ -1072,6 +527,7 @@ namespace StackPropio {
 			this->Controls->Add(this->dgvTablero);
 			this->Name = L"MainForm";
 			this->Text = L"MainForm";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvTablero))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvOrdenados))->EndInit();
@@ -1080,6 +536,10 @@ namespace StackPropio {
 
 		}
 #pragma endregion
+
+		//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+		//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+		//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 		int origen;
 		int destino;
@@ -1279,7 +739,7 @@ namespace StackPropio {
 			int elementosPorFila = elementosOrdenados->Count / columnasOrden;
 
 			elementosOrdenados->Sort();
-			mostrarEnDataGridView(elementosOrdenados, dgvOrdenados, elementosPorFila);
+			mostrarEnDataGridView(elementosOrdenados, dgvTablero, elementosPorFila);
 		}
 
 		//cuenta que la cantidad de X en el archivo sea la correcta
@@ -1314,8 +774,8 @@ namespace StackPropio {
 
 				for (int i = 0; i < letras->Length; i++) {
 					if (letras[i] != "X") {
-						
-						cantidadC ++;
+
+						cantidadC++;
 
 					}
 					else {
@@ -1342,7 +802,78 @@ namespace StackPropio {
 
 		}
 
+		void mostrarEnDataGridView(List<String^>^ elementosOrdenados, DataGridView^ dgvOrdenados, int elementosPorFila) {
+			dgvOrdenados->Columns->Clear(); // Borra todas las columnas existentes
 
+			int numColumnas = elementosPorFila; // Define el número de columnas
+
+			// Agrega columnas
+			for (int i = 0; i < numColumnas; i++) {
+				dgvOrdenados->Columns->Add("Columna" + i, "Columna " + i);
+			}
+
+			// Agrega filas para mostrar elementos
+			for (int i = 0; i < elementosPorFila; i++) {
+				int filaActual = dgvOrdenados->Rows->Add();
+				for (int j = 0; j < numColumnas; j++) {
+					dgvOrdenados->Rows[filaActual]->Cells[j]->Value = elementosOrdenados[j * numColumnas + i];
+				}
+			}
+		}
+
+		void borrar3Caracteres(String^ filename) {
+			StreamReader^ reader = gcnew StreamReader(filename);
+
+			// Lee la línea actual del archivo
+			String^ linea = reader->ReadLine();
+			reader->Close();
+
+			// Verifica que la línea tenga al menos tres caracteres antes de intentar eliminar los últimos tres
+			if (linea->Length >= 3) {
+				// Elimina los últimos tres caracteres
+				linea = linea->Substring(0, linea->Length - 3);
+
+				// Abre el archivo en modo de escritura para sobrescribir su contenido
+				StreamWriter^ writer = gcnew StreamWriter(filename);
+
+				// Escribe la línea modificada en el archivo
+				writer->WriteLine(linea);
+				writer->Close();
+			}
+		}
+
+		void GuardarPilasEnArchivo() {
+			String^ filename = "MapaInicial.txt";
+			StreamWriter^ writer = gcnew StreamWriter(filename);
+
+			// Recorre las pilas y escribe su contenido en el archivo
+			for each (Pila ^ pila in pilas) {
+				Pila^ pilaCopia = gcnew Pila(); // Crea una copia temporal de la pila
+
+				// Copia los elementos de la pila original a la pila temporal
+				while (!pila->isEmpty()) {
+					String^ elemento = pila->Pop()->ToString();
+					pilaCopia->Push(elemento);
+				}
+
+				// Escribe los elementos en el archivo en el orden correcto
+				while (!pilaCopia->isEmpty()) {
+					String^ elemento = pilaCopia->Pop()->ToString();
+					writer->Write(elemento);
+
+					// Agrega una coma si no es el último elemento de la pila
+					if (!pilaCopia->isEmpty()) {
+						writer->Write(",");
+					}
+				}
+				writer->Write(",X,"); // Marca el final de la pila con una "X"
+			}
+
+			// Cierra el archivo
+			writer->Close();
+
+			borrar3Caracteres(filename);
+		}
 		public:
 			property int timeRecibir;
 			property int moveRecibir;
@@ -1369,11 +900,14 @@ namespace StackPropio {
 	}
 		   
 
+		  
+
 		   
 
 		   ArrayList^ pilas;
 
 	private: System::Void btnTablero_Click(System::Object^ sender, System::EventArgs^ e) {
+
 		columnas = definircolumnas();
 		filas = definirfilas();
 		origen = definirorigen();
@@ -1402,22 +936,35 @@ namespace StackPropio {
 		}
 		else {
 			MessageBox::Show("Las filas y columnas deben de estar entre 4 y 10.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			
 		}
-		
+
+	}
+	void EscribirMovimientoEnArchivo(String^ movimiento) {
+			   try {
+				   // Abre o crea el archivo "Movimientos" en modo de escritura
+				   StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt", true);
+
+				   // Escribe el movimiento en el archivo
+				   writer->Write(movimiento);
+
+				   // Cierra el archivo
+				   writer->Close();
+			   }
+			   catch (Exception^ e) {
+				   MessageBox::Show("Error al escribir en el archivo de movimientos: " + e->Message);
+			   }
 	}
 		   
 
-
+		   
 
 private: System::Void btnDataGrid_Click(System::Object^ sender, System::EventArgs^ e) {
 
 }
 
-	  
 
 private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	
 	String^ fileName = "MapaInicial.txt"; // Nombre del archivo
 	try {
 		// Abre el archivo con el programa predeterminado
@@ -1430,35 +977,51 @@ private: System::Void btnAbrirAr_Click(System::Object^ sender, System::EventArgs
 }
 
 
-	private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ e) {
-		columnas = definircolumnas();
-		filas = definirfilas();
-		origen = definirorigen();
-		destino = definirdestino();
-		if (origen >= 0 && origen <= filas && destino >= 0 && destino <= filas && origen != destino) {
-			Pila^ pilaOrigen = (Pila^)pilas[origen];
-			Pila^ pilaDestino = (Pila^)pilas[destino];
+private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	columnas = definircolumnas();
+	filas = definirfilas();
+	origen = definirorigen();
+	destino = definirdestino();
+	if (origen >= 0 && origen < filas && destino >= 0 && destino < filas && origen != destino) {
+		Pila^ pilaOrigen = (Pila^)pilas[origen];
+		Pila^ pilaDestino = (Pila^)pilas[destino];
+		if ((pilaDestino->Count() < columnas && pilaOrigen->Count() > 0)) {
 			pilaDestino->Push(pilaOrigen->Pop());
-
-			dibujarPila(dgvTablero->RowCount, origen, pilaOrigen);
-			dibujarPila(dgvTablero->RowCount, destino, pilaDestino);
-
-			Moviemiento();
+			DibujarPilas();
 
 
+			contMovimientos++;
+			label6->Text = Convert::ToString(contMovimientos);
 
 			if (contMovimientos >= moveRecibir) {
 				String^ mensaje = "Ha llegado a la cantidad máxima de movimientos. Movimientos realizados: " + contMovimientos;
 				MessageBox::Show(mensaje, "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			}
+
+			if (VerificarGanador()) {
+				MessageBox::Show("¡Ganaste el juego!", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+			//else {
+				//MessageBox::Show("Aún no has ganado el juego. Sigue intentando.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			// }
+		
+
+	// Registra la jugada en el archivo "Movimientos"
+	String^ movimiento = "P(" + origen + "), P(" + destino + ")\n";
+	EscribirMovimientoEnArchivo(movimiento);
 		}
 		else {
-			MessageBox::Show("El origen y el destino deben de exitir, y ser distintos entre si", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Error);
-
+			MessageBox::Show("La pila de destino esta llena, o la de origen esta vacia", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
+	}
+	else {
+		MessageBox::Show("Las pilas de origen y destino deben de existir y ser distintas entre ellas", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+
 }
 	   //Hola Fransan :p
-
+	   
 
 private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	// Configura el DataGridView
@@ -1491,16 +1054,16 @@ private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e
 		   }
 	   }
 
-			  
+			 
 
 	private: System::Void btnGanador_Click(System::Object^ sender, System::EventArgs^ e) {
-
 		if (VerificarGanador()) {
 			MessageBox::Show("¡Ganaste el juego!", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		else {
 			MessageBox::Show("Aún no has ganado el juego. Sigue intentando.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		}
+		 }
+		
 	}
 
 	private: System::Void btnResolver_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1509,27 +1072,8 @@ private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e
 	}
 		   
 
-		   void mostrarEnDataGridView(List<String^>^ elementosOrdenados, DataGridView^ dgvOrdenados, int elementosPorFila) {
-			   dgvOrdenados->Columns->Clear(); // Borra todas las columnas existentes
+		   
 
-			   int numColumnas = elementosPorFila; // Define el número de columnas
-
-			   // Agrega columnas
-			   for (int i = 0; i < numColumnas; i++) {
-				   dgvOrdenados->Columns->Add("Columna" + i, "Columna " + i);
-			   }
-
-			   // Agrega filas para mostrar elementos
-			   for (int i = 0; i < elementosPorFila; i++) {
-				   int filaActual = dgvOrdenados->Rows->Add();
-				   for (int j = 0; j < numColumnas; j++) {
-					   dgvOrdenados->Rows[filaActual]->Cells[j]->Value = elementosOrdenados[j * numColumnas + i];
-				   }
-			   }
-		   }
-/// <summary>
-/// ////////////////////////nuevo
-/// </summary>
 private:
 	int minutos = 0;
 	int segundos = 0;
@@ -1557,6 +1101,43 @@ private:
 			MessageBox::Show("Se acabó tu tiempo", "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ fileName = "Movimientos.txt"; // Nombre del archivo
+	try {
+		// Abre el archivo con el programa predeterminado
+		Process::Start(fileName);
+
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show("Error al abrir el archivo: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
+
+
+private: System::Void MainForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	try {
+		// Abre el archivo en modo de escritura para sobrescribir su contenido
+		StreamWriter^ writer = gcnew StreamWriter("Movimientos.txt");
+		writer->Write(""); // Escribe una cadena vacía para borrar el contenido
+		writer->Close();
+	}
+	catch (IOException^ ex) {
+		// Manejo de errores si no se puede borrar el contenido del archivo
+		MessageBox::Show("Error al borrar el contenido del archivo de movimientos: " + ex->Message);
+	}
+}
+private: System::Void btnGuardar_Click(System::Object^ sender, System::EventArgs^ e) {
+	columnas = definircolumnas();
+	filas = definirfilas();
+	origen = definirorigen();
+	destino = definirdestino();
+	GuardarPilasEnArchivo();
+}
+
+	   
+
+	   
+
+
 };
 }
->>>>>>> Stashed changes

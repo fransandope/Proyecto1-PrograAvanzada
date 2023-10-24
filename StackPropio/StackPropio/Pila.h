@@ -11,13 +11,17 @@ public:
 	Pila() {
 		count = 0;
 		start = nullptr;
-
 	}
 
-	void PushPila(String^ value); // Cambié el tipo de dato de int a String
-	String^ PopPila(); // Cambié el tipo de dato de int a String
-	String^ PeekPila(); // Cambié el tipo de dato de int a String
-	bool isEmptyPila();
+	void Push(String^ value); // Cambié el tipo de dato de int a String
+	String^ Pop(); // Cambié el tipo de dato de int a String
+	String^ Peek(); // Cambié el tipo de dato de int a String
+	bool isEmpty();
+	void Clear();
+	Pila^ Copiar();
+	int Count();
+	void BubbleSort();
+	String^ ElementAt(int index);
 
 };
 

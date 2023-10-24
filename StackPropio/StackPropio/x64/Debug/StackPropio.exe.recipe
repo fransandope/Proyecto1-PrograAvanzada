@@ -1,37 +1,11 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe</FullPath>
+      <FullPath>C:\Users\Francisco U\Desktop\StackPropioV1\x64\Debug\StackPropio.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
   <SatelliteDlls />
   <NonRecipeFileRefs />
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <ProjectOutputs>
-    <ProjectOutput>
-      <FullPath>C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe</FullPath>
-    </ProjectOutput>
-  </ProjectOutputs>
-  <ContentFiles />
-  <SatelliteDlls />
-  <NonRecipeFileRefs />
->>>>>>> Stashed changes
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <ProjectOutputs>
-    <ProjectOutput>
-      <FullPath>C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe</FullPath>
-    </ProjectOutput>
-  </ProjectOutputs>
-  <ContentFiles />
-  <SatelliteDlls />
-  <NonRecipeFileRefs />
->>>>>>> Stashed changes
 </Project>
