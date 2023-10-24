@@ -1,13 +1,7 @@
 ﻿  FormInicio.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
   MainForm.cpp
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,16): warning C4305: 'initializing': truncation from '__int64' to 'int'
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\FormInicio.h(276,18): warning C4309: 'initializing': truncation of constant value
-  Node.cpp
   Generating Code...
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
-C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(764): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
-  FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-Pila.obj : warning LNK4099: PDB '' was not found with 'Pila.obj' or at ''; linking object as if no debug info
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+  Cola.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe

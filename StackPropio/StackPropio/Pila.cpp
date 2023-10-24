@@ -89,3 +89,6 @@ String^ Pila::ElementAt(int index) {
     return actual->dato;
 }
 
+int Pila::Count() {
+    return count;
+}

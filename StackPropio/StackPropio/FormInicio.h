@@ -262,6 +262,7 @@ namespace StackPropio {
 			this->Controls->Add(this->btnDificil);
 			this->Controls->Add(this->btnMedio);
 			this->Controls->Add(this->btnFacil);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"FormInicio";
 			this->Text = L"Color Mania";
 			this->ResumeLayout(false);
@@ -272,8 +273,8 @@ namespace StackPropio {
 	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void btnFacil_Click(System::Object^ sender, System::EventArgs^ e) {
-	int timeJuego = 10000000;
-	int moveJuego = 900000000000;
+	int timeJuego = 1000;
+	int moveJuego = 100;
 	
 	MainForm^ tableroJuego = gcnew MainForm();
 	this->Visible = false;

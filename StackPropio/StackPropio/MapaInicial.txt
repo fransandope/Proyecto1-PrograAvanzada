@@ -1,1 +1,1 @@
-R,R,A,M,X,M,A,B,R,X,R,A,B,B,X,B,M,A,M,X,B,M,C,A,M,X,B,M,A,M
+V,V,V,V,V,V,V,V,X,A,A,A,X,M,M,M,M,X,A

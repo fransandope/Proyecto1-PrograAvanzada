@@ -19,6 +19,7 @@ public:
 	bool isEmpty();
 	void Clear();
 	Pila^ Copiar();
+	int Count();
 	void BubbleSort();
 	String^ ElementAt(int index);
 
