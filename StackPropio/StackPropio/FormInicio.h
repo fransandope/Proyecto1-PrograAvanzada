@@ -262,6 +262,7 @@ namespace StackPropio {
 			this->Controls->Add(this->btnDificil);
 			this->Controls->Add(this->btnMedio);
 			this->Controls->Add(this->btnFacil);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"FormInicio";
 			this->Text = L"Color Mania";
 			this->ResumeLayout(false);
