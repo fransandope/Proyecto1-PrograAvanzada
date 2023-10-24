@@ -1,7 +1,7 @@
 ﻿  FormInicio.cpp
   MainForm.cpp
-  Generando código...
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': no todas las rutas de acceso de control devuelven un valor
-C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': no todas las rutas de acceso de control devuelven un valor
-  Cola.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  StackPropio.vcxproj -> C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe
+  Generating Code...
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\MainForm.h(836): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
+  Cola.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  StackPropio.vcxproj -> C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe

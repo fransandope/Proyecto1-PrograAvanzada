@@ -21,3 +21,7 @@ C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\x64\Debug\StackPropio.vcx
 C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\x64\Debug\StackPropio.FormInicio.resources
 C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\x64\Debug\StackPropio.MainForm.resources
 C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.AssemblyReference.cache
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.FormInicio.resources
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.MainForm.resources
+C:\Users\Francisco U\Documents\GitHub\Proyecto1-PrograAvanzada\StackPropio\StackPropio\x64\Debug\StackPropio.vcxproj.GenerateResource.cache

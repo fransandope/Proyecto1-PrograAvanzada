@@ -1055,10 +1055,22 @@ private: System::Void btnMover_Click(System::Object^ sender, System::EventArgs^ 
 			if (contMovimientos >= moveRecibir) {
 				String^ mensaje = "Ha llegado a la cantidad máxima de movimientos. Movimientos realizados: " + contMovimientos;
 				MessageBox::Show(mensaje, "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				btnTablero->Visible = false;
+				txtElementos->Enabled = false;
+				txtPilas->Enabled = false;
+				txtOrigen->Enabled = false;
+				txtDestino->Enabled = false;
+				btnMover->Visible = false;
 			}
 
 			if (VerificarGanador()) {
 				MessageBox::Show("¡Ganaste el juego!", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				btnTablero->Visible = false;
+				txtElementos->Enabled = false;
+				txtPilas->Enabled = false;
+				txtOrigen->Enabled = false;
+				txtDestino->Enabled = false;
+				btnMover->Visible = false;
 			}
 			//else {
 				//MessageBox::Show("Aún no has ganado el juego. Sigue intentando.", "Resultado", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -1169,6 +1181,12 @@ private:
 
 			// Muestra un mensaje
 			MessageBox::Show("Se acabó tu tiempo", "Mensaje", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			btnTablero->Visible = false;
+			txtElementos->Enabled = false;
+			txtPilas->Enabled = false;
+			txtOrigen->Enabled = false;
+			txtDestino->Enabled = false;
+			btnMover->Visible = false;
 		}
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
