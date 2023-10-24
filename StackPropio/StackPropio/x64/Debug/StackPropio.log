@@ -1,7 +1,1 @@
-﻿  FormInicio.cpp
-  MainForm.cpp
-  Generating Code...
-C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
-C:\Users\Francisco U\Desktop\StackPropioV1\StackPropio\MainForm.h(796): warning C4715: 'StackPropio::MainForm::ContarC': not all control paths return a value
-  FormInicio.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  StackPropio.vcxproj -> C:\Users\Francisco U\Desktop\StackPropioV1\x64\Debug\StackPropio.exe
+﻿  StackPropio.vcxproj -> C:\Users\ojort\OneDrive\Documentos\GitHub\Proyecto1-PrograAvanzada\StackPropio\x64\Debug\StackPropio.exe

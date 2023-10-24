@@ -1051,6 +1051,18 @@ private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e
 			   else if (cellValue == "M") {
 				   e->CellStyle->BackColor = System::Drawing::Color::Purple;
 			   }
+			   else if (cellValue == "C") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Chocolate;
+			   }
+			   else if (cellValue == "P") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Pink;
+			   }
+			   else if (cellValue == "S") {
+				   e->CellStyle->BackColor = System::Drawing::Color::SkyBlue;
+			   }
+			   else if (cellValue == "T") {
+				   e->CellStyle->BackColor = System::Drawing::Color::Turquoise;
+			   }
 		   }
 	   }
 
